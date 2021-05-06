@@ -1787,7 +1787,7 @@ JS;
      */
     protected function registerAssetFlashes()
     {
-        if (!Craft::$app->getRequest()->getIsCpRequest()) {
+        if ($this->_templateMode !== self::TEMPLATE_MODE_CP) {
             return;
         }
 
